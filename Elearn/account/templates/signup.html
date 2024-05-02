@@ -17,10 +17,39 @@
 
 {% block body %}
 
+<body class="body">
+<div class="container mt-5"  style="max-width: 400px;">
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="phone_number">Phone Number:</label>
+            <input type="tel" id="phone_number" name="phone_number" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="repassword">Re-enter Password:</label>
+            <input type="password" id="repassword" name="repassword" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Signup</button>
+    </form>
+</div>
 
-<h1>This is Signup page</h1>
-
-
+</body>
 
 {% endblock body %}
 
